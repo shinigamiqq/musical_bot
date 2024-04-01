@@ -131,7 +131,7 @@ async def member_join(member):
 @bot.event
 async def member_leave(member):
     channel = member.guilt.get_channel(1153004665726832702)
-    await channel.send(f'🤖\n{member.display_name} покинул сервер((.')
+    await channel.send(f'🤖\n{member.display_name} left server.')
 
 @bot.command(name='server', help='Command is used to get information about server: !server')
 async def server(ctx):
@@ -140,7 +140,7 @@ async def server(ctx):
 
 @bot.command(name='info', help='Command is used to find information about user: !info <user_name>')
 async def info(ctx, member: discord.Member):
-    user_info = f"Name: {member.name}\nNickname: {member.display_name}\nПрисоединился: {member.joined_at}"
+    user_info = f"Name: {member.name}\nNickname: {member.display_name}\nJoined: {member.joined_at}"
     await ctx.send(f"🤖\n{user_info}")
 
 
