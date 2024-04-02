@@ -115,7 +115,7 @@ async def search(ctx, *urlq):
 
 @bot.command(name='image', help='Command is used to find images: !image cat')
 async def image(ctx, query):
-    url = f'https://api.unsplash.com/search/photos?query={query}&client_id=P8ClmW7M-LPsSEfXarr8obXBuTLXQBhInzyaqYTl6wE'
+    url = f'https://api.unsplash.com/search/photos?query={query}&client_id=ENTER_YOUR_CLIENT_ID'
     response = requests.get(url)
     data = response.json()
     image_url = data['results'][0]['urls']['regular']
@@ -146,7 +146,7 @@ async def info(ctx, member: discord.Member):
 
 @bot.command(name='weather', help='Command is used to find information about weather: !weather London')
 async def weather(ctx, city):
-    api_key = 'aaad98b4785f5ff183037d5decbd4ce3'
+    api_key = 'ENTER_YOUR_API'
     
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
     
